@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.yanweijia.eyes"
+    android:versionCode="5"
+    android:versionName="2.1.13"
+	android:installLocation="auto">
+
+    <uses-sdk
+        android:minSdkVersion="7"
+        android:targetSdkVersion="17" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+	<uses-permission android:name="android.permission.SET_WALLPAPER"/>
+	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<!-- 以下是百度SDK另外还需要的权限 -->
+	<uses-permission android:name = "android.permission.READ_PHONE_STATE"/>
+	<uses-permission android:name = "android.permission.ACCESS_COARSE_LOCATION"/>
+	<uses-permission android:name = "android.permission.ACCESS_WIFI_STATE"/>
+	<uses-permission android:name = "android.permission.CHANGE_WIFI_STATE"/>
+	<uses-permission android:name = "android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+		android:theme="@android:style/Theme.NoTitleBar">
+		
+        <activity 
+            android:name="com.baidu.mobads.AppActivity" 
+            android:configChanges="keyboard|keyboardHidden|orientation"/>
+        <!-- 百度广告id-->
+        <meta-data android:name="BaiduMobAd_APP_ID" android:value="da4ea099"/>
+        <meta-data android:name="BaiduMobAd_APP_SEC" android:value="da4ea099"/>
+        <!-- 百度统计配置 -->
+        <meta-data android:name="BaiduMobAd_CHANNEL" android:value="360"/>
+		<meta-data android:name="BaiduMobAd_STAT_ID" android:value="5ecd49d051"/>
+        <activity
+            android:name="cn.yanweijia.eyes.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.yanweijia.eyes.Activity_SeMang"
+            android:label="色盲测试" >
+        </activity>
+        <activity
+            android:name="cn.yanweijia.eyes.Activity_SeMang_ceshi"
+            android:label="色盲测试">
+        </activity>
+        <activity
+            android:name="cn.yanweijia.eyes.Activity_SeMang_result"
+            android:label="色盲测试结果" >
+        </activity>
+        <activity
+            android:name="cn.yanweijia.eyes.Activity_jinshi"
+            android:label="近视测试" >
+        </activity>
+        <activity
+            android:name="cn.yanweijia.eyes.Activity_jinshi_ceshi_tips"
+            android:label="近视测试" >
+        </activity>
+        <activity
+            android:name="cn.yanweijia.eyes.Activity_jinshi_ceshi_wuyan_zuo"
+            android:label="近视测试" >
+        </activity>
+        <activity
+            android:name="cn.yanweijia.eyes.Activity_jinshi_ceshi_wuyan_you"
+            android:label="近视测试" >
+        </activity>
+        <activity
+            android:name="cn.yanweijia.eyes.Activity_jinshi_ceshi_you"
+            android:label="近视测试" >
+        </activity>
+        <activity
+            android:name="cn.yanweijia.eyes.Activity_jinshi_ceshi_zuo"
+            android:label="近视测试" >
+        </activity>
+        <activity
+            android:name="cn.yanweijia.eyes.Activity_sanguang_ceshi"
+            android:label="散光测试" >
+        </activity>
+        <activity
+            android:name="cn.yanweijia.eyes.Activity_yanbaojiancao"
+            android:label="眼保健操" >
+        </activity>
+        <activity
+            android:name="cn.yanweijia.eyes.Activity_shezhi"
+            android:label="软件设置" >
+        </activity>
+        <activity
+            android:name="cn.yanweijia.eyes.Activity_about"
+            android:label="关于护眼小助手" >
+        </activity>
+        <activity
+            android:name="cn.yanweijia.eyes.Activity_bizhi"
+            android:label="护眼壁纸" >
+        </activity>
+        <activity
+            android:name="cn.yanweijia.eyes.Activity_yejian"
+            android:label="夜间模式" >
+        </activity>
+        <activity
+            android:name="cn.yanweijia.eyes.Activity_jinshi_result"
+            android:label="近视测试结果" >
+        </activity>
+        <activity
+            android:name="cn.yanweijia.eyes.Activity_baojiantu"
+            android:label="眼睛保健图" >
+        </activity>
+        <activity
+            android:name="cn.yanweijia.eyes.Activity_bizhi_liulan"
+            android:label="浏览壁纸"
+			android:screenOrientation="landscape">
+        </activity>
+        <activity
+            android:name="cn.yanweijia.eyes.Activity_eyesSkill"
+            android:label="护眼小技巧">
+        </activity>
+        <activity
+            android:name="cn.yanweijia.eyes.Activity_testrecord"
+            android:label="测试记录">
+        </activity>
+        <activity
+            android:name="cn.yanweijia.eyes.Activity_testrecord_shili"
+            android:label="视力测试记录">
+        </activity>
+        <activity
+            android:name="cn.yanweijia.eyes.Activity_testrecord_semang"
+            android:label="色盲测试记录">
+        </activity>
+        <activity
+            android:name="cn.yanweijia.eyes.Activity_advice"
+            android:label="建议反馈">
+        </activity>
+        
+    </application>
+
+</manifest>

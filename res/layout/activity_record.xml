@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    android:orientation="vertical" 
+    android:background="@drawable/background" 
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout 
+        android:layout_width="fill_parent" 
+        android:layout_height="50.0dip">
+        <Button 
+            android:id="@+id/button_record_back" 
+            android:background="@drawable/btn_back" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:layout_marginLeft="20.0dip" 
+            android:layout_centerVertical="true" />
+        <TextView 
+            android:textSize="20.0sp" 
+            android:textColor="@color/text_top" 
+            android:id="@id/text_top_top" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:text="测试记录"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <ScrollView 
+        android:id="@id/scrollView1" 
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content">
+        <LinearLayout 
+            android:orientation="vertical" 
+            android:layout_width="fill_parent" 
+            android:layout_height="fill_parent">
+            <RelativeLayout 
+                android:id="@+id/relativelayout_shili_record" 
+                android:background="@drawable/layout_press" 
+                android:layout_width="fill_parent" 
+                android:layout_height="wrap_content">
+                <TextView 
+                    android:textSize="40.0sp" 
+                    android:textColor="@color/purple" 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="wrap_content" 
+                    android:id="@id/text_top" 
+                    android:layout_marginLeft="15.0dip" 
+                    android:layout_marginTop="10.0dip" 
+                    android:layout_marginRight="15.0dip" 
+                    android:gravity="center_horizontal"
+                    android:text="视力测试记录" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_below="@id/text_top"
+                    android:layout_marginLeft="13.0dip"
+                    android:layout_marginRight="13.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:background="@color/black" />
+
+            </RelativeLayout>
+            <RelativeLayout 
+                android:id="@+id/relativelayout_semang_record" 
+                android:background="@drawable/layout_press" 
+                android:layout_width="fill_parent" 
+                android:layout_height="wrap_content">
+                <TextView 
+                    android:textSize="40.0sp" 
+                    android:textColor="@color/purple" 
+                    android:id="@id/text_top" 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginLeft="15.0dip" 
+                    android:layout_marginTop="10.0dip" 
+                    android:layout_marginRight="15.0dip" 
+                    android:gravity="center_horizontal"
+                    android:text="色盲测试记录" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_below="@id/text_top"
+                    android:layout_marginLeft="13.0dip"
+                    android:layout_marginRight="13.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:background="@color/black" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

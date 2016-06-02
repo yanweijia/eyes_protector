@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    android:orientation="vertical" 
+    android:background="@drawable/background" 
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip">
+        <Button 
+            android:id="@+id/button_yanbaojiancao_back" 
+            android:background="@drawable/btn_back" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:layout_marginLeft="20.0dip" 
+            android:layout_centerVertical="true" />
+        <TextView 
+            android:textSize="20.0sp" 
+            android:textColor="@color/text_top" 
+            android:id="@id/text_top_top" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:text="@string/yanbaojiancao_top" 
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <RelativeLayout 
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content">
+        <TextView 
+            android:textSize="16.0sp"
+            android:textColor="@color/black" 
+            android:layout_width="180.0dip" 
+            android:layout_height="wrap_content" 
+            android:layout_marginLeft="15.0dip" 
+            android:text="@string/text_yanbao_yinyue" />
+        <RelativeLayout 
+            android:id="@id/button_play" 
+            android:background="@drawable/btn" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:layout_marginRight="10.0dip" 
+            android:layout_alignParentRight="true">
+            <ImageView 
+                android:id="@+id/image_paly_state" 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" 
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content">
+        <ScrollView 
+            android:id="@id/scrollView1" 
+            android:layout_width="fill_parent" 
+            android:layout_height="wrap_content">
+            <LinearLayout 
+                android:orientation="vertical" 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content">
+                <TextView 
+                    android:textSize="16.0sp" 
+                    android:textColor="@color/text_jp" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginLeft="10.0dip" 
+                    android:text="@string/yanbaojiancao1" />
+                <ImageView 
+                    android:layout_gravity="center_horizontal" 
+                    android:background="@drawable/yanbaojiancao1" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginTop="10.0dip" />
+                <TextView 
+                    android:textSize="16.0sp" 
+                    android:textColor="@color/black" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginLeft="10.0dip" 
+                    android:layout_marginTop="10.0dip" 
+                    android:layout_marginRight="10.0dip" 
+                    android:text="@string/yanbaojiancaostep1" />
+                <ImageView 
+                    android:layout_gravity="center_horizontal" 
+                    android:background="@drawable/yanbaojiancaostep1" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginTop="10.0dip" />
+                <TextView 
+                    android:textSize="16.0sp" 
+                    android:textColor="@color/black" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginLeft="10.0dip" 
+                    android:layout_marginTop="10.0dip" 
+                    android:layout_marginRight="10.0dip" 
+                    android:text="@string/yanbaojiancaostep2" />
+                <ImageView 
+                    android:layout_gravity="center_horizontal" 
+                    android:background="@drawable/yanbaojiancaostep2" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginTop="10.0dip" />
+                <TextView 
+                    android:textSize="16.0sp" 
+                    android:textColor="@color/black" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginLeft="10.0dip" 
+                    android:layout_marginTop="10.0dip" 
+                    android:layout_marginRight="10.0dip" 
+                    android:text="@string/yanbaojiancaostep3" />
+                <ImageView 
+                    android:layout_gravity="center_horizontal" 
+                    android:background="@drawable/yanbaojiancaostep3" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginTop="10.0dip" />
+                <TextView 
+                    android:textSize="16.0sp" 
+                    android:textColor="@color/black" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginLeft="10.0dip" 
+                    android:layout_marginTop="10.0dip" 
+                    android:layout_marginRight="10.0dip" 
+                    android:text="@string/yanbaojiancaostep4" />
+                <ImageView 
+                    android:layout_gravity="center_horizontal" 
+                    android:background="@drawable/yanbaojiancaostep4" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginTop="10.0dip" />
+                <TextView 
+                    android:textSize="16.0sp" 
+                    android:textColor="@color/black" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginLeft="10.0dip" 
+                    android:layout_marginTop="10.0dip" 
+                    android:layout_marginRight="10.0dip" 
+                    android:text="@string/yanbaojiancaostep5" />
+                <ImageView 
+                    android:layout_gravity="center_horizontal" 
+                    android:background="@drawable/yanbaojiancaostep5" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginTop="10.0dip" />
+                <TextView 
+                    android:textSize="16.0sp" 
+                    android:textColor="@color/black" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginLeft="10.0dip" 
+                    android:layout_marginTop="10.0dip" 
+                    android:layout_marginRight="10.0dip"
+                    android:text="@string/yanbaojiancaostep6" />
+                <ImageView 
+                    android:layout_gravity="center_horizontal" 
+                    android:background="@drawable/yanbaojiancaostep6" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginTop="10.0dip" />
+                <RelativeLayout 
+                    android:layout_gravity="center_horizontal" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginTop="10.0dip" />
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</LinearLayout>
