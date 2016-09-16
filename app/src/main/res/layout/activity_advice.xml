@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/background">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dip" >
+        <Button 
+            android:id="@+id/button_advice_back" 
+            android:background="@drawable/btn_back" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:layout_marginLeft="20.0dip" 
+            android:layout_centerVertical="true" />
+        <TextView 
+            android:textSize="20.0sp" 
+            android:textColor="@color/text_top" 
+            android:id="@id/text_top_top" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:text="建议反馈" 
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="6.0dip"
+            android:layout_marginTop="10.0dip"
+            android:orientation="vertical" >
+
+            <EditText
+        		android:id="@+id/edittext_advice_jianyi"
+        		android:layout_width="match_parent"
+        		android:layout_height="150.0dip"
+        		android:hint="请填写您的建议或者意见"
+        		android:gravity="top"
+        		android:inputType="textMultiLine" >
+   			</EditText>
+   			<EditText
+        		android:id="@+id/edittext_advice_lianxifangshi"
+        		android:layout_marginTop="10.0dip"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:hint="填写您的联系方式">
+   			</EditText>
+
+   			<TextView
+   			    android:id="@+id/textView1"
+   			    android:layout_width="wrap_content"
+   			    android:layout_height="wrap_content"
+   			    android:textColor="#f555"
+   			    android:text="感谢您能问我们提出宝贵的建议,如果还有其他的咨询或者技术支持请发送邮件happyboyywj@163.com或者加技术QQ:986381091(注明来意)\n护眼小助手现在诚招加盟者,有兴趣的可以按照上面的地址联系,只需投资几百元,坐等收入" />
+
+   			<Button
+                android:id="@+id/button_advice_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10.0dip"
+                android:background="@drawable/btn_button"
+                android:text="确认提交"
+                android:textColor="@color/white"
+                android:textSize="25.0sp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    
+
+</LinearLayout>

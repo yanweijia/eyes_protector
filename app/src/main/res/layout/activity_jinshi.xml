@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip" >
+
+        <Button
+            android:id="@+id/button_jinshi_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20.0dip"
+            android:background="@drawable/btn_back" />
+
+        <TextView
+            android:id="@id/text_top_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="近视测试"
+            android:textColor="@color/text_top"
+            android:textSize="20.0sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <ScrollView
+            android:id="@id/scrollView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/rlayout_jp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/layout_press" >
+
+                    <ImageView
+                        android:id="@+id/imageview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15.0dip"
+                        android:layout_marginTop="15.0dip"
+                        android:background="@drawable/shezhi" />
+
+                    <TextView
+                        android:id="@+id/text_top"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15.0dip"
+                        android:layout_marginRight="15.0dip"
+                        android:layout_marginTop="10.0dip"
+                        android:layout_toRightOf="@id/imageview"
+                        android:text="科学原理"
+                        android:textColor="@color/black"
+                        android:textSize="20.0sp" />
+
+                    <TextView
+                        android:id="@+id/text_buttom"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/text_top"
+                        android:layout_marginLeft="15.0dip"
+                        android:layout_marginRight="15.0dip"
+                        android:layout_marginTop="10.0dip"
+                        android:layout_toRightOf="@id/imageview"
+                        android:text="近视眼主要检测阅读文字的视力，如果你的近视力偏低，可能是偏高度的近视或远视、花眼造成的"
+                        android:textColor="@color/black" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.5dip"
+                        android:layout_below="@id/text_buttom"
+                        android:layout_marginLeft="13.0dip"
+                        android:layout_marginRight="13.0dip"
+                        android:layout_marginTop="10.0dip" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@id/rlayout_jp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
+                    android:background="@drawable/layout_press" >
+
+                    <ImageView
+                        android:id="@id/imageview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15.0dip"
+                        android:layout_marginTop="15.0dip"
+                        android:background="@drawable/semang_how" />
+
+                    <TextView
+                        android:id="@id/text_top"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15.0dip"
+                        android:layout_marginRight="15.0dip"
+                        android:layout_marginTop="10.0dip"
+                        android:layout_toRightOf="@id/imageview"
+                        android:text="如何测试"
+                        android:textColor="@color/black"
+                        android:textSize="20.0sp" />
+
+                    <TextView
+                        android:id="@id/text_buttom"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/text_top"
+                        android:layout_marginLeft="15.0dip"
+                        android:layout_marginRight="15.0dip"
+                        android:layout_marginTop="10.0dip"
+                        android:layout_toRightOf="@id/imageview"
+                        android:text="将手机放于距离眼睛40CM（厘米）的位置，观察屏幕上'山'的开口方向，并正确选择你看到的开口方向；左右眼交替测试"
+                        android:textColor="@color/black" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.5dip"
+                        android:layout_below="@id/text_buttom"
+                        android:layout_marginLeft="13.0dip"
+                        android:layout_marginRight="13.0dip"
+                        android:layout_marginTop="10.0dip" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@id/rlayout_jp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
+                    android:background="@drawable/layout_press" >
+
+                    <ImageView
+                        android:id="@id/imageview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15.0dip"
+                        android:layout_marginTop="15.0dip"
+                        android:background="@drawable/semang_time" />
+
+                    <TextView
+                        android:id="@id/text_top"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15.0dip"
+                        android:layout_marginRight="15.0dip"
+                        android:layout_marginTop="10.0dip"
+                        android:layout_toRightOf="@id/imageview"
+                        android:text="测试时间"
+                        android:textColor="@color/black"
+                        android:textSize="20.0sp" />
+
+                    <TextView
+                        android:id="@id/text_buttom"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/text_top"
+                        android:layout_marginLeft="15.0dip"
+                        android:layout_marginRight="15.0dip"
+                        android:layout_marginTop="10.0dip"
+                        android:layout_toRightOf="@id/imageview"
+                        android:text="约2分钟"
+                        android:textColor="@color/black" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.5dip"
+                        android:layout_below="@id/text_buttom"
+                        android:layout_marginLeft="13.0dip"
+                        android:layout_marginRight="13.0dip"
+                        android:layout_marginTop="10.0dip" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/button_jinshi_gotoceshi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10.0dip"
+                    android:background="@drawable/btn_button"
+                    android:text="开始测试"
+                    android:textColor="@color/white"
+                    android:textSize="25.0sp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dip" />
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</LinearLayout>

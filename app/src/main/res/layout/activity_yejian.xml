@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/background">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dip" >
+        <Button 
+            android:id="@+id/button_yejian_back" 
+            android:background="@drawable/btn_back" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:layout_marginLeft="20.0dip" 
+            android:layout_centerVertical="true" />
+        <TextView 
+            android:textSize="20.0sp" 
+            android:textColor="@color/text_top" 
+            android:id="@id/text_top_top" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:text="夜间模式" 
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="6.0dip"
+            android:orientation="vertical" >
+            <TextView 
+                android:id="@+id/textview_yejian_xitongliangdu"
+                android:layout_width="fill_parent" 
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:textSize="15sp"
+                android:textColor="@color/text_top"
+                android:text="调节系统屏幕亮度亮度:(部分手机可能不行)" />
+        
+            <SeekBar
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/seekbar_yejian_liangdu"
+                android:paddingLeft="5.0dip"
+                android:paddingRight="5.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:layout_marginBottom="10.0dip"
+                android:max="255"
+                >
+        	</SeekBar>
+        	<CheckBox
+        		android:id="@+id/checkbox_yejian"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_marginLeft="5dip"
+        		android:textColor="@color/text_top"
+        		android:text="启用夜间模式" />
+   			 <TextView 
+                android:id="@+id/textview_yejian_liangdu"
+                android:layout_width="fill_parent" 
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:textSize="15sp"
+                android:textColor="@color/text_top"
+                android:text="设置夜间模式亮度:" />
+   			 <SeekBar
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/seekbar_yejianmoshi"
+                android:paddingLeft="5.0dip"
+                android:paddingRight="5.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:layout_marginBottom="10.0dip"
+                android:max="200"
+                >
+        	</SeekBar>
+        	<TextView 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textSize="17sp"
+                android:textColor="@color/text_top"
+                android:text="暗★←←←←◆→→→→★亮" />
+        	<TextView 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                android:text="注意:
+在安装应用时请关闭夜间模式,否则无法安装应用.这是安卓(3.0以前)系统的Bug 4.0以及以上的系统没影响\n夜间模式启动后可以直接按主页键让软件在后台运行,直接点击返回可能会造成无法去除夜间模式" />
+        	<LinearLayout
+        		android:id="@+id/linearlayout_yejian_ad"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:orientation="vertical" >
+   			</LinearLayout>
+   			<TextView 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                android:text="提示,再设置中可以去除广告" />
+        	
+        	
+        </LinearLayout>
+    </ScrollView>
+
+    
+
+</LinearLayout>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    android:orientation="vertical" 
+    android:background="@drawable/background" 
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout 
+        android:layout_width="fill_parent" 
+        android:layout_height="50.0dip">
+        <Button 
+            android:id="@+id/button_shezhi_back" 
+            android:background="@drawable/btn_back" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:layout_marginLeft="20.0dip" 
+            android:layout_centerVertical="true" />
+        <TextView 
+            android:textSize="20.0sp" 
+            android:textColor="@color/text_top" 
+            android:id="@id/text_top_top" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:text="软件设置"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <ScrollView 
+        android:id="@id/scrollView1" 
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content">
+        <LinearLayout 
+            android:orientation="vertical" 
+            android:layout_width="fill_parent" 
+            android:layout_height="fill_parent">
+            <RelativeLayout 
+                android:id="@+id/rlayout_BackToUs" 
+                android:background="@drawable/layout_press" 
+                android:layout_width="fill_parent" 
+                android:layout_height="wrap_content">
+                <TextView 
+                    android:textSize="20.0sp" 
+                    android:textColor="@color/black" 
+                    android:id="@id/text_top" 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginLeft="15.0dip" 
+                    android:layout_marginTop="10.0dip" 
+                    android:layout_marginRight="15.0dip" 
+                    android:text="建议反馈" />
+                <TextView 
+                    android:textColor="@color/black" 
+                    android:id="@id/text_buttom" 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginLeft="15.0dip" 
+                    android:layout_marginTop="10.0dip" 
+                    android:layout_marginRight="15.0dip" 
+                    android:text="请将您宝贵的建议反馈给我们更正(发送出去建议后还可以取消掉广告哦)" 
+                    android:layout_below="@id/text_top" />
+                <View 
+                    android:background="@color/black" 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="0.5dip" 
+                    android:layout_marginLeft="13.0dip" 
+                    android:layout_marginTop="10.0dip" 
+                    android:layout_marginRight="13.0dip" 
+                    android:layout_below="@id/text_buttom" />
+            </RelativeLayout>
+            <RelativeLayout 
+                android:id="@+id/rlayout_update" 
+                android:background="@drawable/layout_press" 
+                android:layout_width="fill_parent" 
+                android:layout_height="wrap_content">
+                <TextView 
+                    android:textSize="20.0sp" 
+                    android:textColor="@color/black" 
+                    android:id="@id/text_top" 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginLeft="15.0dip" 
+                    android:layout_marginTop="10.0dip" 
+                    android:layout_marginRight="15.0dip" 
+                    android:text="检测更新" />
+                <TextView 
+                    android:textColor="@color/black" 
+                    android:id="@id/text_buttom" 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginLeft="15.0dip" 
+                    android:layout_marginTop="10.0dip" 
+                    android:layout_marginRight="15.0dip" 
+                    android:text="检查是否有更新版本" 
+                    android:layout_below="@id/text_top" />
+                <View 
+                    android:background="@color/black" 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="0.5dip" 
+                    android:layout_marginLeft="13.0dip" 
+                    android:layout_marginTop="10.0dip" 
+                    android:layout_marginRight="13.0dip" 
+                    android:layout_below="@id/text_buttom" />
+            </RelativeLayout>
+            <RelativeLayout 
+                android:id="@+id/rlayout_about" 
+                android:background="@drawable/layout_press" 
+                android:layout_width="fill_parent" 
+                android:layout_height="wrap_content">
+                <TextView 
+                    android:textSize="20.0sp" 
+                    android:textColor="@color/black" 
+                    android:id="@id/text_top" 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginLeft="15.0dip" 
+                    android:layout_marginTop="10.0dip" 
+                    android:layout_marginRight="15.0dip" 
+                    android:text="关于" />
+                <TextView 
+                    android:textColor="@color/black" 
+                    android:id="@id/text_buttom" 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginLeft="15.0dip" 
+                    android:layout_marginTop="10.0dip" 
+                    android:layout_marginRight="15.0dip" 
+                    android:text="关于护眼小助手" 
+                    android:layout_below="@id/text_top" />
+                <View 
+                    android:background="@color/black" 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="0.5dip" 
+                    android:layout_marginLeft="13.0dip" 
+                    android:layout_marginTop="10.0dip" 
+                    android:layout_marginRight="13.0dip" 
+                    android:layout_below="@id/text_buttom" />
+            </RelativeLayout>
+            <RelativeLayout 
+                android:layout_width="fill_parent" 
+                android:layout_height="wrap_content">
+                <TextView 
+                    android:textSize="20.0sp" 
+                    android:textColor="@color/black" 
+                    android:id="@+id/text_shezhi_ad_title" 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginLeft="15.0dip" 
+                    android:layout_marginTop="10.0dip" 
+                    android:layout_marginRight="15.0dip" 
+                    android:text="关闭主页面广告" />
+                <TextView 
+                    android:textColor="@color/black" 
+                    android:id="@+id/text_shezhi_ad" 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginLeft="15.0dip" 
+                    android:layout_marginTop="10.0dip" 
+                    android:layout_marginRight="15.0dip" 
+                    android:text="只需点击这里并且在上面的建议反馈中给我们提供建议就可以关闭主页面广告" 
+                    android:layout_below="@id/text_shezhi_ad_title" />
+                <LinearLayout 
+                    android:id="@+id/linearlayout_shezhi_adview"
+                    android:layout_below="@id/text_shezhi_ad"
+            		android:orientation="vertical" 
+            		android:layout_width="fill_parent" 
+            		android:layout_height="wrap_content">
+            	</LinearLayout>
+                <View 
+                    android:background="@color/black" 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="0.5dip" 
+                    android:layout_marginLeft="13.0dip" 
+                    android:layout_marginTop="10.0dip" 
+                    android:layout_marginRight="13.0dip" 
+                    android:layout_below="@id/linearlayout_shezhi_adview" />
+                
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
