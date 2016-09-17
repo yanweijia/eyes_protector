@@ -38,7 +38,7 @@ public class MainActivity extends Activity
 		if(cursor.getCount() == 0)
 		{
 			//TODO:如果数据库中没有关于取消广告的记载则显示广告
-			adLayout.addView(null);
+			//adLayout.addView(null);
 		}
 		db.close();
 		

@@ -11,8 +11,9 @@
 
         <Button
             android:id="@+id/button_jinshi_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:scaleType="centerInside"
             android:layout_centerVertical="true"
             android:layout_marginLeft="20.0dip"
             android:background="@drawable/btn_back" />
@@ -49,8 +50,9 @@
 
                     <ImageView
                         android:id="@+id/imageview"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:scaleType="centerInside"
                         android:layout_marginLeft="15.0dip"
                         android:layout_marginTop="15.0dip"
                         android:background="@drawable/shezhi" />
@@ -97,8 +99,9 @@
 
                     <ImageView
                         android:id="@id/imageview"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:scaleType="centerInside"
                         android:layout_marginLeft="15.0dip"
                         android:layout_marginTop="15.0dip"
                         android:background="@drawable/semang_how" />
@@ -145,8 +148,9 @@
 
                     <ImageView
                         android:id="@id/imageview"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:scaleType="centerInside"
                         android:layout_marginLeft="15.0dip"
                         android:layout_marginTop="15.0dip"
                         android:background="@drawable/semang_time" />

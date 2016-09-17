@@ -53,7 +53,7 @@ public class Activity_yejian extends Activity{
 			//如果数据库中没有关于取消广告的记载则显示广告
 			LinearLayout adLayout = (LinearLayout)findViewById(R.id.linearlayout_yejian_ad);
 
-			adLayout.addView(null);
+			//adLayout.addView(null);
 		}
 		db.close();
 		

@@ -18,11 +18,11 @@
 
             <ImageView
                 android:id="@+id/imageview_record_xiangmu"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:scaleType="centerInside"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="5.0dip"
-                android:scaleType="center"
                 android:src="@drawable/shezhi" />
 
             <TextView
@@ -70,11 +70,11 @@
     </LinearLayout>
 
     <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+        android:layout_width="30dip"
+        android:layout_height="30dip"
+        android:scaleType="centerInside"
                 android:layout_marginTop="15.0dip"
                 android:layout_marginLeft="5dip"
-                android:scaleType="center"
                 android:src="@drawable/detele" />
     <TextView
                 android:layout_width="wrap_content"

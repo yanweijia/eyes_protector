@@ -29,7 +29,7 @@ public class Activity_shezhi extends Activity
 		LinearLayout linearlayout_ad = (LinearLayout)findViewById(R.id.linearlayout_shezhi_adview);
 		
 		//TODO:添加广告View的代码
-		linearlayout_ad.addView(null);
+		//linearlayout_ad.addView(null);
 
 		
 		relativelayout_about.setOnClickListener(new View.OnClickListener() 
@@ -60,7 +60,7 @@ public class Activity_shezhi extends Activity
 			{
 				AlertDialog.Builder builder = new AlertDialog.Builder(Activity_shezhi.this);
 				builder.setTitle("软件更新");
-				builder.setMessage("软件每次启动后都会自动检测更新.不用手动检测!");
+				builder.setMessage("软件重新启动即可自动检测更新,无需手动更新!");
 				builder.setPositiveButton("确定",null);
 				builder.create().show();
 			}

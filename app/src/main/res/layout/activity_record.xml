@@ -10,9 +10,10 @@
         android:layout_height="50.0dip">
         <Button 
             android:id="@+id/button_record_back" 
-            android:background="@drawable/btn_back" 
-            android:layout_width="wrap_content" 
-            android:layout_height="wrap_content" 
+            android:background="@drawable/btn_back"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:scaleType="centerInside"
             android:layout_marginLeft="20.0dip" 
             android:layout_centerVertical="true" />
         <TextView 

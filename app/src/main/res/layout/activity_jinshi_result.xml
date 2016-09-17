@@ -11,8 +11,9 @@
 
         <Button
             android:id="@+id/button_jinshi_result_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:scaleType="centerInside"
             android:layout_centerVertical="true"
             android:layout_marginLeft="20.0dip"
             android:background="@drawable/btn_back" />
@@ -122,7 +123,7 @@
                 <Button
                     android:id="@+id/button_jinshi_result_test_again"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="60dip"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginLeft="10.0dip"
                     android:layout_weight="1.0"
@@ -134,7 +135,7 @@
                 <Button
                     android:id="@+id/button_jinshi_result_gotoback"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="60dip"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginLeft="10.0dip"
                     android:layout_marginRight="10.0dip"

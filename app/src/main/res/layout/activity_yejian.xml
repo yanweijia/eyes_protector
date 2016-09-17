@@ -10,9 +10,10 @@
         android:layout_height="50dip" >
         <Button 
             android:id="@+id/button_yejian_back" 
-            android:background="@drawable/btn_back" 
-            android:layout_width="wrap_content" 
-            android:layout_height="wrap_content" 
+            android:background="@drawable/btn_back"
+			android:layout_width="30dip"
+			android:layout_height="30dip"
+			android:scaleType="centerInside"
             android:layout_marginLeft="20.0dip" 
             android:layout_centerVertical="true" />
         <TextView 
@@ -98,8 +99,7 @@
                 android:layout_marginLeft="5dip"
                 android:textSize="17sp"
                 android:textColor="@color/black"
-                android:text="注意:
-在安装应用时请关闭夜间模式,否则无法安装应用.这是安卓(3.0以前)系统的Bug 4.0以及以上的系统没影响\n夜间模式启动后可以直接按主页键让软件在后台运行,直接点击返回可能会造成无法去除夜间模式" />
+                android:text="@string/yejianNotice" />
         	<LinearLayout
         		android:id="@+id/linearlayout_yejian_ad"
         		android:layout_width="match_parent"
