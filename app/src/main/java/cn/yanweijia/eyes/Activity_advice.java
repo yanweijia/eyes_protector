@@ -1,7 +1,6 @@
 package cn.yanweijia.eyes;
 
 
-import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import android.app.Activity;
@@ -16,6 +15,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.baidu.mobstat.StatService;
+
 
 public class Activity_advice extends Activity 
 {
@@ -29,6 +30,9 @@ public class Activity_advice extends Activity
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_advice);
+		//百度统计
+		StatService.setSessionTimeOut(30);  //两次启动应用30s视为第二次启动
+		StatService.setLogSenderDelayed(0); //崩溃后延迟0秒发送崩溃日志
 
 		dbhelper = new MyDatabaseHelper(this,"eyes.db",null,1);
 		text_jianyi = (EditText)findViewById(R.id.edittext_advice_jianyi);
@@ -104,5 +108,13 @@ public class Activity_advice extends Activity
 	{
 
 		super.onResume();
+		//百度统计
+		StatService.onResume(this);
+	}
+	@Override
+	protected void onPause() {
+		super.onPause();
+		//百度统计_统计页面
+		StatService.onPause(this);
 	}
 }

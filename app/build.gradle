@@ -1,15 +1,21 @@
 apply plugin: 'com.android.application'
 
 android {
+    //下面5行代码来自网络,主要是为了给bulid的apk文件命名
+    android.applicationVariants.all {
+        variant ->
+            variant.outputs.each {
+                output -> output.outputFile = new File(output.outputFile.parent, "eyesProtector" + "_v" + defaultConfig.versionName + "_" + defaultConfig.versionCode + buildType.name + ".apk");
+            }
+    }
     compileSdkVersion 24
     buildToolsVersion "24.0.1"
-
     defaultConfig {
         applicationId "cn.yanweijia.eyes"
         minSdkVersion 15
         targetSdkVersion 24
-        versionCode 1
-        versionName "1.0"
+        versionCode 20
+        versionName '5.0'
     }
     buildTypes {
         release {
@@ -17,10 +23,16 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    productFlavors {
+    }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:24.1.1'
+    compile files('libs/Baidu_Mtj_3.7.4.2.jar')
+    compile files('libs/Baidu_MobAds_SDK_v4.6.jar')
+    compile files('libs/AdsMOGO_Android_SDK_1.6.5.jar')
+    compile files('libs/Adwo_Android_SDK6.2.jar')
 }

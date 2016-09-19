@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView;
 import android.widget.GridView;
@@ -20,6 +21,11 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import com.adsmogo.adapters.AdsMogoCustomEventPlatformEnum;
+import com.adsmogo.adview.AdsMogoLayout;
+import com.adsmogo.controller.listener.AdsMogoListener;
+import com.baidu.mobstat.StatService;
+
 public class MainActivity extends Activity 
 {
     int back = 0;//按两次退出/按一次提示"再按一次返回键退出"
@@ -30,6 +36,11 @@ public class MainActivity extends Activity
     {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+
+		//百度统计
+		StatService.setSessionTimeOut(30);  //两次启动应用30s视为第二次启动
+		StatService.setLogSenderDelayed(0); //崩溃后延迟0秒发送崩溃日志
+
 		//TODO:专门用来写广告的Linearlayout
 		LinearLayout adLayout = (LinearLayout)findViewById(R.id.linearlayout_main_ad);
 		dbhelper = new MyDatabaseHelper(this,"eyes.db",null,1);
@@ -38,7 +49,29 @@ public class MainActivity extends Activity
 		if(cursor.getCount() == 0)
 		{
 			//TODO:如果数据库中没有关于取消广告的记载则显示广告
-			//adLayout.addView(null);
+			AdsMogoLayout adsMogoLayoutCode = new AdsMogoLayout(MainActivity.this, "635d7536a3414841b21af99dab32a4ce");
+			//设置广告出现的位置(悬浮于底部)
+			adsMogoLayoutCode.setAdsMogoListener(new AdsMogoListener() {
+				@Override
+				public void onInitFinish() {}
+				@Override
+				public void onRequestAd(String s) {}
+				@Override
+				public void onRealClickAd() {}
+				@Override
+				public void onReceiveAd(ViewGroup viewGroup, String s) {}
+				@Override
+				public void onFailedReceiveAd() {}
+				@Override
+				public void onClickAd(String s) {}
+				@Override
+				public boolean onCloseAd() {return false;}
+				@Override
+				public void onCloseMogoDialog() {}
+				@Override
+				public Class getCustomEvemtPlatformAdapterClass(AdsMogoCustomEventPlatformEnum adsMogoCustomEventPlatformEnum) {return null;}
+			});
+			adLayout.addView(adsMogoLayoutCode);
 		}
 		db.close();
 		
@@ -87,20 +120,16 @@ public class MainActivity extends Activity
 				startIntent(position);
 			}
 		});
-		//TODO:轮盘广告
-		//IconsAd iconsAd = new IconsAd(this,new int[]{R.drawable.ic_launcher});
-		//iconsAd.loadAd(this);
 	}
 	@Override
 	protected void onDestroy() {
-		// TODO Auto-generated method stub
-		
 		super.onDestroy();
+		//TODO:销毁adsMogo的资源并清空线程
+		AdsMogoLayout.clear();
 	}
 	//按下返回键提示消息
 	@Override
 	public void onBackPressed() {
-		// TODO Auto-generated method stub
 		if(back == 0)
 		{
 			Toast.makeText(this, "o(>﹏<)o不要再按啦~~再按就退出了.", Toast.LENGTH_SHORT).show();
@@ -116,6 +145,8 @@ public class MainActivity extends Activity
 	@Override
 	protected void onPause() {
 		super.onPause();
+		//百度统计_统计页面
+		StatService.onPause(this);
 	}
 	@Override
 	protected void onRestart() {
@@ -124,6 +155,8 @@ public class MainActivity extends Activity
 	protected void onResume() 
 	{
 		super.onResume();
+		//百度统计
+		StatService.onResume(this);
 	}
 	// 启动各个功能的Activity
 	public void startIntent(int position) {
@@ -190,67 +223,5 @@ public class MainActivity extends Activity
 			break;
 		default: Toast.makeText(MainActivity.this, "MainActivity Error! 主页面错误,请及时在设置中反馈给我们以便我们修正错误", Toast.LENGTH_SHORT).show();
 		}
-	}
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu)
-	{
-		super.onCreateOptionsMenu(menu);
-		//成功创建菜单后执行
-		
-		menu.add(0, 1, 0, "建议反馈");
-		menu.add(0, 2, 0, "关于软件");
-		menu.add(0, 3, 0, "设置");
-		menu.add(0, 4, 0, "退出");
-		return true;
-	}
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) 
-	{
-		//菜单项被选择后执行
-		int id = item.getItemId();
-		switch (id) 
-		{
-			case 1:
-			{
-				//建议反馈
-				Intent intent_advice = new Intent();
-				intent_advice.setClass(MainActivity.this,Activity_advice.class);
-				MainActivity.this.startActivity(intent_advice);
-			}
-			break;
-			case 2:
-			{
-				Intent intent = new Intent();
-				intent.setClass(MainActivity.this,Activity_about.class );
-				MainActivity.this.startActivity(intent);
-			}
-			break;
-			case 3:
-			{
-				Intent intent = new Intent();
-				intent.setClass(MainActivity.this, Activity_shezhi.class);
-				MainActivity.this.startActivity(intent);
-			}
-			break;
-			case 4:
-			{
-				AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-				builder.setTitle("护眼小助手");
-				builder.setMessage("确定要退出软件 ?");
-				builder.setPositiveButton("确定", new DialogInterface.OnClickListener()
-				{
-					@Override
-					public void onClick(DialogInterface arg0, int arg1) {
-						MainActivity.this.finish();
-					}
-				});
-				builder.setNegativeButton("取消", null);
-				builder.create().show();
-			}
-			break;
-			default:
-				Toast.makeText(null, "Sorry!\nThe MenuItem hasn't find!",Toast.LENGTH_SHORT).show();
-		}
-		return super.onOptionsItemSelected(item);
 	}
 }

@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.view.WindowManager.LayoutParams;
 import android.widget.Button;
@@ -14,6 +15,11 @@ import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
+
+import com.adsmogo.adapters.AdsMogoCustomEventPlatformEnum;
+import com.adsmogo.adview.AdsMogoLayout;
+import com.adsmogo.controller.listener.AdsMogoListener;
+import com.baidu.mobstat.StatService;
 
 public class Activity_yejian extends Activity{
     MyDatabaseHelper dbhelper;//数据库操作,用来判断是否显示广告 
@@ -23,10 +29,24 @@ public class Activity_yejian extends Activity{
 	WindowManager wm = null;
 	View tv = null;
 	WindowManager.LayoutParams params = null;
+
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		//TODO:销毁adsMogo的资源并清空线程
+		AdsMogoLayout.clear();
+	}
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_yejian);
+
+		//百度统计
+		StatService.setSessionTimeOut(30);  //两次启动应用30s视为第二次启动
+		StatService.setLogSenderDelayed(0); //崩溃后延迟0秒发送崩溃日志
+
+
 		Button button_back = (Button)findViewById(R.id.button_yejian_back);
 		seekBar = (SeekBar) findViewById(R.id.seekbar_yejian_liangdu);
 		seekbar_yejian = (SeekBar)findViewById(R.id.seekbar_yejianmoshi);
@@ -50,10 +70,31 @@ public class Activity_yejian extends Activity{
 		Cursor cursor = db.rawQuery("select * from GuangGao", null);
 		if(cursor.getCount() == 0)
 		{
-			//如果数据库中没有关于取消广告的记载则显示广告
+			//TODO:如果数据库中没有关于取消广告的记载则显示广告
 			LinearLayout adLayout = (LinearLayout)findViewById(R.id.linearlayout_yejian_ad);
-
-			//adLayout.addView(null);
+			AdsMogoLayout adsMogoLayoutCode = new AdsMogoLayout(Activity_yejian.this, "635d7536a3414841b21af99dab32a4ce");
+			//设置广告出现的位置(悬浮于底部)
+			adsMogoLayoutCode.setAdsMogoListener(new AdsMogoListener() {
+				@Override
+				public void onInitFinish() {}
+				@Override
+				public void onRequestAd(String s) {}
+				@Override
+				public void onRealClickAd() {}
+				@Override
+				public void onReceiveAd(ViewGroup viewGroup, String s) {}
+				@Override
+				public void onFailedReceiveAd() {}
+				@Override
+				public void onClickAd(String s) {}
+				@Override
+				public boolean onCloseAd() {return false;}
+				@Override
+				public void onCloseMogoDialog() {}
+				@Override
+				public Class getCustomEvemtPlatformAdapterClass(AdsMogoCustomEventPlatformEnum adsMogoCustomEventPlatformEnum) {return null;}
+			});
+			adLayout.addView(adsMogoLayoutCode);
 		}
 		db.close();
 		
@@ -153,5 +194,13 @@ public class Activity_yejian extends Activity{
 	{
 
 		super.onResume();
+		//百度统计
+		StatService.onResume(this);
+	}
+	@Override
+	protected void onPause() {
+		super.onPause();
+		//百度统计_统计页面
+		StatService.onPause(this);
 	}
 }
