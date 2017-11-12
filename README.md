@@ -1,5 +1,6 @@
 # 护眼小助手eyes_protector
 ## eyes protector 护眼小助手
+代码是14年早期写的,现在(17年11月)再来看看自己的代码感觉当时为什么能写出这么蠢的代码
 #### 市场网址:http://shouji.baidu.com/software/6837746.html
 ![图片1](http://b.hiphotos.bdimg.com/wisegame/pic/item/61087bf40ad162d93b47a03412dfa9ec8a13cd6a.jpg)
 ![图片2](http://c.hiphotos.bdimg.com/wisegame/pic/item/18f40ad162d9f2d39db8e6c7aaec8a136327cc6a.jpg)
